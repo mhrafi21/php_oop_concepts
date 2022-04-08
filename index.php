@@ -229,28 +229,67 @@
 //construct method
 
 
-class Student{
-    protected $name;
-    protected $age;
+// class Student{
+//     protected $name;
+//     protected $age;
 
-    function __construct($name,$age){
-        echo $name;
-        echo "<br>";
-        echo $age;
+//     function __construct($name,$age){
+//         echo $name;
+//         echo "<br>";
+//         echo $age; 
+//         echo "<br>";
+//         $this->name($name);
+        
+//     }
+
+//     public function name($name){
+//       echo $this->name = $name;
+//     }
+// }
+// $obj = new Student("hasan", 16);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// pass data to parent from child
+
+
+
+class Student{
+    public $name;
+    function __construct($name){
+        $this->name = $name;
     }
 }
-new Student("Mahdi Hasan Rafi" , 18)
 
 
+class Child extends Student{
+    public $name;
+    function __construct($name){
 
-
-
-
-
-
-
-
-
+       Parent::construct('adfa');
+    }
+}
+new Child("mahdi");
 
 
 
